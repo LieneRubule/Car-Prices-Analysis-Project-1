@@ -1,4 +1,4 @@
-# Car Price Analysis Project 1
+## Car Price Analysis Project 1
 
 # Car Price Analysis 
 Car Price Analysis is a project based on car pricing in the US market. It focuses on understanding the different factors that can influence the price of a car and why prices vary between different vehicles.
@@ -22,7 +22,7 @@ This dataset will be used to explore how these features vary and how strongly th
 
 * Understand how car prices vary across the US market.
 * Identify which car features have the strongest relationship with price.
-* Explore whether features such as engine size, horsepower, body style and fuel efficiency affect car prices.
+* Explore whether features such as engine size, horsepower, body style and fuel efficiency relateto car prices.
 * Compare prices between different types and makes of cars.
 * Use the findings to support decisions about vehicle design, pricing and market strategy
 
