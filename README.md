@@ -1,75 +1,166 @@
+# Car Price Analysis Project 1
+
+# Car Price Analysis 
+Car Price Analysis is a project based on car pricing in the US market. It focuses on understanding the different factors that can influence the price of a car and why prices vary between different vehicles.
+
+The data set was acquired from Car Price Prediction – Multiple Linear Regression from Kaggle.
+
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
+## Dataset Content
+The dataset has 205 rows and 26 columns, with a file size of 27 KB. Each row represents one car, and each column describes a specific feature.
 
-Welcome,
+The information covers a wide range of attributes, including car make and model, fuel type, engine specifications, vehicle dimensions, performance indicators and the final selling price.
 
-This is the Code Institute student template for the three Data Analytics capstone projects. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+This dataset will be used to explore how these features vary and how strongly they relate to price.
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
 
-If you are working on the first capstone project, you can also delete `.python-version`, `.slugignore`, `Procfile` and `setup.sh` as they are only required for later dashboard projects. 
 
-## How to use this repo
+## Business Requirements
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+# The automobile company needs the analysis to:
 
-1. Copy the URL of your repository to your clipboard.
+* Understand how car prices vary across the US market.
+* Identify which car features have the strongest relationship with price.
+* Explore whether features such as engine size, horsepower, body style and fuel efficiency affect car prices.
+* Compare prices between different types and makes of cars.
+* Use the findings to support decisions about vehicle design, pricing and market strategy
 
-1. In VS Code, select **File** -> **Open Folder**.
+## Hypothesis and how to validate?
+Hypothesis: The larger the engine size, the more expensive the car.
 
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
+How it will be validated:
 
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open a new terminal.
+* Note the relationship between engine size and price  
+* Visualizations to show any patterns/trends.  
+* Calculate the correlation between engine size and price. This measures the strength of the relationship.  
+* Check the results to see if the data support the hypothesis.
 
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
+The hypothesis is supported by the analysis.  
 
-1. In VS Code, select **File** > **Open Folder** again.
+## Conclusion
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
+The analysis meets the business requirements by providing a clearer understanding of the factors associated with car prices in the dataset.
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate. You need to create your virtual environment, also called a venv, and then activate it whenever you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
+### Car Price Distribution
 
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
+![Car Price Distribution](images/car_price_distribution.png)
 
-1. Choose **Venv** from the dropdown list.
+Most cars are concentrated within the lower price ranges, while fewer vehicles have much higher prices.
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+### Engine Size and Car Price
 
-1. **DO NOT** click the box next to `requirements.txt`; you need to complete additional steps before installing your dependencies. Click **OK**.
+![Engine Size vs Car Price](images/engine_size_vs_price.png)
 
-1. You will see a `.venv` folder appear in the file explorer pane, indicating that the virtual environment has been created.
+Engine size shows a strong positive relationship with price. Cars with larger engines generally have higher prices, supporting the project hypothesis.
 
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
+### Highway MPG and Car Price
 
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
+![Highway MPG vs Car Price](images/highway_mpg_vs_price.png)
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
+Highway MPG shows a different relationship with price. Cars with higher highway fuel efficiency generally appear within the lower price ranges.
 
- ```console
- pip3 install -r requirements.txt
- ```
+Overall, the findings show that vehicle characteristics such as engine size, horsepower and fuel efficiency are associated with differences in car price. These findings can support decisions around vehicle design, pricing and market strategy
 
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
+## Project Plan
+1. Load and understand the dataset -Set up the GitHub repository to organise the project and track progress.   
+1.1. Download the CarPrice_Assignment.csv dataset from Kaggle and add it to the project.  
+1.2. Import the Python libraries needed for the analysis.  
+1.3. Load the dataset into a Pandas DataFrame.  
+1.4. View the first rows and check the number of rows and columns.  
+1.5. Examine the column names, data types and the type of information held in each column.  
+2. Check and clean the data.  
+2.1. Check the dataset for missing values and duplicated rows.  
+2.2. Look for spelling differences or inconsistent values within the categorical columns.  
+2.3. Decide whether any columns are unnecessary for the analysis.  
+2.4. Make any required corrections so the data is ready to use.  
+2.5. Confirm the dataset’s shape after cleaning to check whether any rows or columns were removed.  
+3. Explore the data using descriptive statistics.
+3.1. Calculate summary statistics for the numerical columns.  
+3.2. Examine the minimum, maximum, mean and median car prices.  
+3.3. Compare values across features such as engine size, horsepower and fuel efficiency.  
+3.4. Review the different categories found in columns such as car body, fuel type and drive wheel.  
+3.5. Use the results to identify noticeable patterns or unusual values.  
+4. Investigate relationships and create visualisations.  
+4.1. Explore how individual car features relate to price.  
+4.2. Calculate correlations between numerical variables.  
+4.3. Create suitable charts to make patterns and relationships easier to understand.  
+4.4. Compare prices across different vehicle categories.  
+4.5. Use the visualisations to identify which features appear to have the strongest relationship with car price.  
+5. Review the results and form a conclusion.  
+5.1. Compare the findings with the project hypothesis.  
+5.2. Decide whether the results support or reject the hypothesis.  
+5.3. Summarise the most important patterns found during the analysis.  
+5.4. Explain which car features appear to have the greatest influence on price.  
+5.5. Present the final conclusion clearly for both technical and non-technical readers.
+6. Relate the findings to the business requirements.  
+6.1. Use the visualisations to explain how car prices are distributed.  
+6.2. Identify which car features show the strongest relationships with price.  
+6.3. Use the engine size and price relationship to support the hypothesis.  
+6.4. Summarise how the findings could support pricing and vehicle design decisions.
 
-1. Click the **Kernel** button, then choose **Python Environments**.
+## Rationale to map the business requirements to the data visualisations
 
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
+- Car price distribution is visualised to show the range of prices in the dataset and identify where most car prices are concentrated.
+- Relationships between car features and price are visualised to identify which features appear to have the strongest influence on price.
+- Engine size and car price are compared visually to support the project hypothesis that cars with larger engines tend to have higher prices.
+- Comparisons between different vehicle categories help show how factors such as drive wheel, fuel type and aspiration relate to car price.
+- Different visualisation types are used to make the findings clear and easier to understand for both technical and non-technical readers.
 
-```console
-! python --version
-```
 
-## Deployment Reminders
+## Analysis techniques used
 
-* The `.python-version`, `.slugignore`, `Procfile` and `setup.sh` files are necessary only if you are deploying a Streamlit app to Heroku as part of your submission for units 2 and 3. 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack, currently supported version that most closely matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+- The dataset is first examined to understand its structure, including the number of rows and columns, column names, data types and unique values.
+- Data quality checks are carried out to identify missing values, duplicated rows and inconsistent entries before beginning the analysis.
+- Descriptive statistics are used to examine values such as the mean, median, minimum and maximum and to understand how numerical features vary across the dataset.
+- Correlation analysis is used to identify which numerical features have the strongest relationships with car price and to support the project hypothesis.
+- Matplotlib, Seaborn and Plotly visualisations are used to explore patterns, distributions and relationships within the data.
+- The analysis follows a logical order, beginning with data extraction and cleaning, followed by exploration, visualisation and interpretation of the results.
+- One limitation is the dataset size, as it contains only 205 cars and may not fully represent the wider US car market. Correlation can show relationships between variables, but it cannot prove that one variable directly causes changes in another.
+- Generative AI supports project planning, README structure, code adjustments and the selection of suitable analysis and visualisation methods. Suggested content and code are reviewed, tested and adjusted before being included in the project.
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+
+
+## Ethical considerations (optional)
+
+I handled the data responsibly and followed the UK GDPR and Data Protection Act 2018 to ensure that any personal or sensitive information was protected.
+
+
+## Unfixed Bugs
+
+No known unfixed bugs remain in the project.
+
+## Development Roadmap
+
+During the project, some challenges were encountered with data cleaning, selecting suitable visualisations and displaying Plotly charts correctly within the Jupyter Notebook. These were resolved by checking the data carefully, testing the code and making adjustments where needed.
+
+The project helped develop skills in data extraction, data cleaning, exploratory data analysis and data visualisation using Matplotlib, Seaborn and Plotly. It also provided further experience with Jupyter Notebooks, Git, GitHub and organising a complete data analysis project.
+
+For future projects, these skills can be developed further by working with larger datasets, exploring more advanced statistical analysis and creating interactive dashboards.
+
+
+## Main Data Analysis Libraries
+
+- **Pandas** - used to load, inspect, clean and analyse the dataset.
+- **NumPy** - used to support numerical data analysis.
+- **Matplotlib** - used to create visualisations showing distributions and relationships within the data.
+- **Seaborn** - used to create statistical visualisations and explore relationships between variables.
+- **Plotly Express** - used to create interactive visualisations for exploring the car price data.
+
+## Credits
+
+- Code Institute LMS learning materials and personal notes made throughout the course were used as the main reference for the techniques and code applied in this project.
+- *Python Crash Course, Third Edition* by Eric Matthes was used as an additional reference for Python concepts and programming.
+- ChatGPT was used throughout the project for structural guidance, help with wording and organising the README and Jupyter Notebooks, and support when troubleshooting errors.
+- ChatGPT was also used on occasions to assist with adapting or correcting code. Any suggested code was reviewed, tested and adjusted before being included in the project.
+- The project structure, analysis decisions, visualisation choices and interpretation of the results were developed and reviewed as part of the project work
+
+
+
+
+
+## Acknowledgements
+
+A special thank you to the Code Institute tutors and learning community for the guidance and support provided throughout the course.
+
+Thanks also to my family for their patience and support while completing the course and this project.
